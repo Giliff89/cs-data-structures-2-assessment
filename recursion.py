@@ -14,10 +14,15 @@ def print_item(my_list, i=0):
         3
 
     """
-    pass
+    if i == len(my_list):
+        return
+
+    print my_list[i]
+    print_item(my_list, i + 1)
 
 
 # 2. Write a function that uses recursion to print each node in a tree.
+
 
 def print_all_tree_data(tree):
     """Prints all of the nodes in a tree.
@@ -41,7 +46,13 @@ def print_all_tree_data(tree):
         3
 
     """
-    pass
+
+    print tree.data
+    for child in tree.children:
+        print_all_tree_data(child)
+
+    if not tree.children:
+        return
 
 # 3. Write a function that uses recursion to find the length of a list.
 
@@ -52,10 +63,14 @@ def list_length(my_list):
         4
 
     """
-    pass
+    if my_list == []:
+        return 0
+
+    return 1 + list_length(my_list[1:])
 
 
 # 4. Write a function that uses recursion to count how many nodes are in a tree.
+
 
 def num_nodes(tree):
     """Counts the number of nodes.
@@ -86,7 +101,15 @@ def num_nodes(tree):
         6
     """
 
-    pass
+    if tree.children == []:
+        return 1
+
+    count = 0
+
+    for child in tree.children:
+        count += num_nodes(child)
+    return 1 + count
+
 
 #####################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
