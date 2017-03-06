@@ -1,0 +1,92 @@
+Part 1: Discussion Questions
+
+Make a new file and add your answers to the questions below. Push the file to your github repository along with the other solutions.
+
+Recursion
+
+In your own words, what is recursion?
+    Recursion is the concept of a function that calls itself, and can be used in
+    the place of a loop. This allows the function to use less code to reiterate
+    or complete tasks with a lot of repetition in them.
+
+Why is it necessary to have a base case?
+    The base case tells us when we are done running the function, so it won't end
+    up in an infinite loop of calling itself over and over again.
+
+Graphs
+
+What is a graph?
+    Graphs are similar to trees, but can have more complex paths such as loops,
+    or even disconnected nodes. The relationships can be directed if that is 
+    necessary for properly demonstrating what is happen in the graph.
+
+How is a graph different from a tree?
+    A graph can have cycles or connect in many directions, unlike a tree. A graph
+    can also have nodes that are not connected, but are still a part of the graph.
+    It can also show dependencies, like when two things need to happen before the
+    next step occurs, but are not actually connected to each other.
+
+Give an example of something that would be good to model with a graph.
+    Cooking a meal - you prep veggies while the pan is heating, for instance. The
+    meal tasks would be directed, because your vegetables won't cook if the pan
+    is not already hot.
+
+Performance of Different Data Structures
+
+Fill in the missing spots in the chart with the correct runtimes. Do this by reasoning through how the data structures work, NOT by looking up the solution. Add-R means add to the right/end/top and Add-L means add to the left/beginning/bottom. There are X’s in the spots where that operation doesn’t make sense for that data structure (for instance, you can’t index a stack, or pop from the end of a queue). We’ve provided the first few answers for you.
+
+Fill in the runtimes for the following actions for the table below:
+
+Data Structure                  Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)             O(1)    O(n)    O(1)    O(n)    O(n)      O(1)
+Linked List                     O(n)    O(n)    O(1)    O(1)    O(1)      O(n)
+Doubly-Linked List              O(n)    O(n)    O(1)    O(1)    O(1)      O(1)
+Queue (as Array)                X         X     O(1)      X     O(n)        X
+Queue (as LL or DLL)            X         X     O(1)      X     O(1)        X
+Stack (as Array, LL, or DLL)    X         X     O(1)      X       X       O(1)
+Deque (as DLL)                  X         X     O(1)    O(1)    O(1)      O(1)
+
+Index: Find an item in the structure when you know its position
+Search: Find an item in the structure when you know its data
+Add(R/L): Set a key in set/dictionary or add node to tree
+Pop(R/L): Remove a key or node
+
+Fill in Runtime and Memory:
+
+The answers for dictionary have been provided; you should fill in the rest:
+
+Data Structure           Get         Add         Delete     Iterate     Memory
+Dictionary (Hash Map)    O(1)        O(1)        O(1)       O(n)        medium
+Set (Hash Map)           O(1)        O(1)        O(1)       O(n)        medium
+Binary Search Tree       O(log n)    O(log n)    O(log n)   O(log n)    little
+Tree                     O(n)        O(1)        O(1)       O(n)        little
+
+Get: Find an item in the structure
+Add: Set a key in set/dictionary or add node to tree
+Delete: Remove a key or node
+Iterate: Find next item in data structure
+Memory: Relative to data, how much memory is used? (Choices: a little, medium, or a lot)
+
+Sorting
+
+Describe in words how the Bubble Sort algorithm works.
+    The bubble sort works through a list of values two at a time, deciding which
+    is the larger of the two. The larger value should be on the right side, so it
+    is moved if it is currently on the left. This value on the right will now be
+    compared as the value on the left, with the value to it's right. At the end of
+    the first run, the largest value will "bubble" up to the end. With repeated
+    iterations, the list will eventually be ordered.
+
+Describe in words how the Merge Sort algorithm works.
+    This is a fast sort in which two already sorted lists are merged together by comparing the first element in each, and adding the lowest value to the new list.
+    This continues until one list is empty, and then the remainder of the other list
+    can be added to the end. This only works if both lists are already sorted! We can
+    sort them by breaking them into lists of an individual item, then use a merge
+    sort to build them back into larger lists until we have the final sorted list
+    desired.
+
+Describe in words how the Quick Sort algorithm works.
+    A quick sort chooses a "pivot" point, where it will shift anything below that
+    value to the left of the pivot, and anything larger to the right. This won't 
+    sort the list outright, but it will get the values closer to where they need to be. You must then continue to choose pivots on either side of the first pivot, and after a few iterations the list will be sorted.
+
